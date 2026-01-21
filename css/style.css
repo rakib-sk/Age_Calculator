@@ -1,0 +1,131 @@
+:root {
+    --primary: #2ecc71;
+    --primary-dark: #27ae60;
+    --background: #f4fdf7;
+    --card-bg: #ffffff;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #e9fff1, #f9fffc);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.calculator {
+    background: var(--card-bg);
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+input[type="date"] {
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+input[type="date"]:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+button {
+    width: 100%;
+    padding: 0.9rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+    display: none;
+}
+
+.result {
+    margin-top: 2rem;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+.result h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+.highlight {
+    color: var(--primary-dark);
+    font-weight: bold;
+}
+
+.result p {
+    color: var(--text-light);
+    margin-bottom: 0.6rem;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 1.8rem;
+    text-align: center;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 1.5rem;
+    }
+}
