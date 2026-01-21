@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="calculator">
+    <h1>Age Calculator</h1>
+
+    <div class="form-group">
+        <label>Your Birth Date</label>
+        <input type="date" id="birthdate">
+        <div class="error" id="date-error">Birth date cannot be in the future</div>
+    </div>
+
+    <button onclick="calculateAge()">Calculate Age</button>
+
+    <div class="result" id="age-result">
+        <h2>Your Exact Age</h2>
+        <p>
+            <span class="highlight" id="years">0</span> years,
+            <span class="highlight" id="months">0</span> months,
+            <span class="highlight" id="days">0</span> days
+        </p>
+
+        <p>Born on: <span class="highlight" id="display-birthdate"></span></p>
+        <p>Today: <span class="highlight" id="display-currentdate"></span></p>
+
+        <p>Next Birthday: <span class="highlight" id="next-birthday"></span></p>
+        <p>Days Remaining: <span class="highlight" id="days-until"></span></p>
+    </div>
+
+    <div class="footer">
+        Made with | Morning UI Design
+    </div>
+</div>
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
